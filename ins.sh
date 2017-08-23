@@ -1,5 +1,4 @@
-
-#!/usr/bin/env bash
+#!/usr/bin/zsh
 
 unameOut="$(uname -s)"
 case "${unameOut}" in
@@ -42,38 +41,11 @@ elif [ ${machine} = Cygwin ] ; then
 	python2-pip \
 	python2-setuptools \
 	python2-yaml \
-
-
-	python2-paramiko
-
-
+	python-paramiko \
 	libffi-devel \
  	gcc-core gcc-g++ \
  	libgmp-devel   
-  
 	#----------------
-
-	git nano openssh openssl openssl-devel libffi-devel gcc-core gcc-g++
-	git clone --depth 1 git://github.com/ansible/ansible
-	cd ansible
-	PATH+=:~+/bin
-	export PYTHONPATH=~+/lib
-	ansible --version
+	easy_install-2.7 pip
+	pip install ansible
 fi
-
-
-
-
-
-
-
-
-
-#!/bin/bash
-#type apt-cyg || exit
-#apt-cyg install git python-{jinja2,six,yaml}
-#git clone --depth 1 git://github.com/ansible/ansible
-#cd ansible
-#PATH+=:~+/bin
-#export PYTHONPATH=~+/lib
-#ansible --version
