@@ -22,11 +22,7 @@ if [ ${machine} = Linux ] ; then
 	ansible --version
 
 elif [ ${machine} = Cygwin ] ; then
-<<<<<<< HEAD
-	#---Install packege installer
-=======
 	#---Install soft
->>>>>>> 018dbf0d47dba3ef9ec378b54fae3d0272336b3d
 	wget rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
 	install apt-cyg /bin
 	#----------------
