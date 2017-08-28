@@ -22,7 +22,7 @@ if [ ${machine} = Linux ] ; then
 	ansible --version
 
 elif [ ${machine} = Cygwin ] ; then
-	#---Install soft
+	#---Install packege installer
 	lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
 	install apt-cyg /bin
 	#----------------
@@ -44,7 +44,7 @@ elif [ ${machine} = Cygwin ] ; then
 	python-paramiko \
 	libffi-devel \
  	gcc-core gcc-g++ \
- 	libgmp-devel   
+ 	#libgmp-devel   
 	#----------------
 	easy_install-2.7 pip
 	pip install ansible
