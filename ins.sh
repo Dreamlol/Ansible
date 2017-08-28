@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/bash
 
 unameOut="$(uname -s)"
 case "${unameOut}" in
@@ -48,4 +48,5 @@ elif [ ${machine} = Cygwin ] ; then
 	#----------------
 	easy_install-2.7 pip
 	pip install ansible
+	ansible --version
 fi
