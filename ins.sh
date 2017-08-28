@@ -28,8 +28,8 @@ elif [ ${machine} = Cygwin ] ; then
 	install apt-cyg /bin && rm apt-cyg
 	#----------------
 	apt-cyg install curl git nano make openssh binutils gmp \
-	#openssl \
-	#openssl-devel \
+	openssl \
+	openssl-devel \
 	python \
 	python-crypto \
 	python-jinja2 \
