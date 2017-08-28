@@ -25,11 +25,11 @@ elif [ ${machine} = Cygwin ] ; then
 
 	#-------Install soft
 	wget rawgit.com/transcode-open/apt-cyg/master/apt-cyg 
-	install apt-cyg /bin
+	install apt-cyg /bin && rm apt-cyg
 	#----------------
 	apt-cyg install curl git nano make openssh binutils gmp \
-	openssl \
-	openssl-devel \
+	#openssl \
+	#openssl-devel \
 	python \
 	python-crypto \
 	python-jinja2 \
@@ -43,10 +43,9 @@ elif [ ${machine} = Cygwin ] ; then
 	python2-setuptools \
 	python2-yaml \
 	python-paramiko \
-	libffi-devel \
+	#libffi-devel \
  	gcc-core gcc-g++ \
- 	#libgmp-devel   
-	#----------------
+ 	#--------Install ansible
 	easy_install-2.7 pip
 	pip install ansible
 	ansible --version
